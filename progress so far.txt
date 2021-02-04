@@ -1,0 +1,5 @@
+1. you can change font .
+2.you can change the backgroung of the textArea
+3.you can change font-color .
+4.you can change the background image of the canvas.
+5.And many more.......
