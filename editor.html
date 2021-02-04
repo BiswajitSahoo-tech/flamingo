@@ -1,0 +1,447 @@
+<html>
+<head>	
+<title>experiment</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3css.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src = "textarea.js"></script>
+<style>
+.wm-bckarw:before{content:"↩"}
+.wm-heart:before{content:"💗"}
+.arw:hover
+{
+ box-shadow: 0 0 2px #BDBDBD;
+    background-color: #cccccc;
+ }
+ @keyframes wmanimateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+
+.wm-animate-right4{position:relative;animation:wmanimateright 0.4s}
+  .wm-animate-right45{position:relative;animation:wmanimateright 0.45s}
+ .wm-animate-right5{position:relative;animation:wmanimateright 0.5s}
+ .wm-animate-right55{position:relative;animation:wmanimateright 0.55s}
+ .wm-animate-right6{position:relative;animation:wmanimateright 0.6s}
+
+.wm-chatmodal{z-index:3;display:none;padding-top:5px;position:fixed;right: 13%;bottom: 0;width:16%;height:48%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4);border-radius: 15px}
+.wm-chatmodal-content{margin:auto;position:relative;padding:0;outline:0}
+@media (max-width:600px){.wm-chatmodal-content{margin:0 10px;width:auto!important}.wm-modal{padding-top:30px}
+@media (max-width:768px){.wm-chatmodal-content{width:500px}.wm-chatmodal{padding-top:50px}}
+@media (min-width:993px){.wm-chatmodal-content{width:900px}
+.wm-card-4{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+</style>
+</head>
+<body>
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="" onclick="b()"
+  class="w3-bar-item w3-button">ZXC</a>
+  <a href="" onclick="b()" class="w3-bar-item w3-button">ABC</a>
+  <a href="" onclick="b()" class="w3-bar-item w3-button">DEF</a>
+</nav>
+<div id="chatModal" class="wm-chatmodal w3-animate-bottom" >
+
+    <div class="wm-chatmodal-content  wm-card-4">
+	<h7 style="color: #FFF59D;font-size: 17px"> <center><span style="">Message</span></center></h7>
+	 <!--<header class="w3-container w3-new-yellow w3-center w3-padding-16"> 
+        <span onclick="document.getElementById('chatModal').style.display='none'" 
+       class="w3-button w3-new-black w3-new-text-yellow w3-large w3-display-topright"></span>
+        <h2 class="w3-wide"><span class="w3-new-text-dark"></span></h2>
+      </header>
+	  <br>
+      <div class="w3-container w3-padding-small" >
+	     
+	    
+	  </div>-->
+	</div>
+</div>
+
+
+<div class="w3-top">
+  <div class=" w3-xlarge  " style="max-width:100%;height:48px;background-color:#f1f1f1!important;box-shadow: 0px 0.2px 4px 0px #BDBDBD">
+     <div class="w3-left  " style="    margin-top: 8px"><i class="wm-heart" style=""></i><b style="color:#5f13e4">Heart'sBlog</b></div>
+     	
+	             <div class="w3-grey w3-right " style="border-radius:50%;height:26 px;margin-right:5px;    margin-top: 10px"><i class="fa fa-user"></i></div>
+		         <i class="fa fa-list w3-right" style="margin-right:15px;margin-top: 11px"></i>
+	             
+		   
+	       
+		          
+		  
+	  </div>
+
+  </div>
+</div>  
+<br><br>
+
+  <div class="" style="width:100%;height:5%;position:fixed;background-color:#fbf9f9!important">
+  </div>
+  <br>
+  
+   <div class=" wm-canvas" style="height:3.4%;margin-top: 17.2;position: fixed;background-color:#f3f3f3;box-shadow:0px 0.5px 0px #BDBDBD" >
+          <i class="fa fa-font  " style="font-size:16px;margin-right: 16px;margin-left:16px;margin-left:16px" onclick = editor.fontFamily()></i>
+<i class="fa fa-bold  " style="font-size:16px;margin-right: 16px;margin-left:16px" onclick = editor.bold()></i><i class="fa fa-underline  " style="font-size:16px;margin-right: 16px;margin-left:16px" onclick = editor.underlineLine()></i>
+<i class="fa fa-italic  " style="font-size:16px;margin-right: 16px;margin-left:16px" onclick = editor.italic()></i><i class="fa fa-text-width  " style="font-size:16px;margin-right: 16px;margin-left:16px " onclick = editor.incrfsize()></i>
+<i class="fa fa-align-left  " style="font-size:16px;margin-right: 16px;margin-left:16px" onclick = editor.alignLeft()></i><i class="fa fa-align-center  " style="font-size:16px;margin-right: 16px;margin-left:16px" onclick= editor.alignCenter()></i>
+<i class="fa fa-align-right  " style="font-size:16px;margin-right: 16px;margin-left:16px" onclick = editor.alignRight()></i><i class="fa fa-align-justify  " style="font-size:16px;margin-right: 16px;margin-left:16px" onclick = editor.alignJustify()></i>
+ <!--      
+<i class="fa fa-list  " style="font-size:16px;margin-right: 16px;margin-left:16px"></i><i class="fa fa-image  " style="font-size:16px;margin-right: 16px;margin-left:16px"></i>
+<i class="fa fa-photo  " style="font-size:16px;margin-right: 16px;margin-left:16px"></i> -->
+       
+       
+       <i class="" style="font-size:16px;margin-right: 16px;margin-left:16px"></i>
+<i class="fa fa-pencil  " style="font-size:16px;margin-right: 16px;margin-left:16px" onclick=editor.colorFont()></i>
+       <!--<i class="fa fa-map-marker  " style="font-size:16px;margin-right: 16px;margin-left:16px"></i>-->
+<i class="fa fa-edit  " style="font-size:16px;margin-right: 16px;margin-left:16px" onclick = editor.bgColor()></i><i class="fa fa-adjust  " style="font-size:16px;margin-right: 16px;margin-left:16px" onclick = editor.adjust()></i>
+<i class="fa fa-check-square-o  " style="font-size:16px;margin-right: 16px;margin-left:16px"></i><i class="fa fa-share-square-o  " style="font-size:16px;margin-right: 16px;margin-left:16px"></i>
+<i class="fa fa-arrows  " style="font-size:16px;margin-right: 16px;margin-left:16px"></i><i class="fa fa-play  " style="font-size:16px;margin-right: 16px;margin-left:16px"></i>
+<i class="fa fa-stop  " style="font-size:16px;margin-right: 16px;margin-left:16px"></i><i class="fa fa-pause  " style="font-size:16px;margin-right: 16px;margin-left:16px"></i>
+<i class="" style="font-size:16px;margin-right: 16px;margin-left:16px"></i><i class="" style="font-size:16px;margin-right: 16px;margin-left:16px"></i>	  
+   </div>
+    <div class=" w3-right " style="height:3.4%;width:12%;margin-top: 17.2;background-color:#f3f3f3!important;border:1px solid #7E57C2;border-radius:0px;position: fixed;margin-left: 88%">
+        <div style="width:100% ;height:100%">   
+		   <div style="width:26px;height:26px;float:left;box-shadow: 0.3px 0px 1px #7e57c2" onclick="d()">
+		   <i class="fa fa-arrow-left" style="font-size:20;width:13px;color: #7e57c2;
+                                                                margin-top: 3px;margin-left: 2px"></i>
+		   </div>
+		  <center> <h4 style="    margin: 0.4px 0px;font-size: 17px" id="menutitle">Customize</h4></center>
+		</div>
+    </div>
+   <br><br>
+   <div class="wm-canvas " style="height:95%;background-color:#F5F5F5;background-image:url('t3.png')" id="canvas">
+       <textarea class="   -custome-top" id="txt"  name="editor" 
+	     rows=""  wrap="hard" cols="" style="height:inherit;width: 50%;margin-left: 352;box-sizing:border-box;
+               resize:none;
+                background-color:#F5F5F5;
+                 outline:none;border-style: none;box-shadow: 1px 8px 17px 0px #9e9e9e">
+		</textarea>
+	   
+	   
+   </div>
+   <div class="wm-sidemenu " style="height:95%;background-color:#EEEEEE!important;position: fixed;margin-left: 88%">
+    <div class="wm-animate-right4" style="width:28%;height:8%;background-color:#E0E0E0;margin-left:3%;margin-right:5%;float:left;margin-top: 16px;border-radius: 27px" onclick="c()" id="m1">
+	     <center> <i class="fa fa-image " style="font-size:170%;margin-top:14px"></i></center>
+	</div>
+	<div class="wm-animate-right4" style="width:28%;height:8%;background-color:#E0E0E0;margin-right:5%;float:left;margin-top: 16px;border-radius: 27px" id="m2">
+	      	    <center>  <i class="fa fa-share" style="font-size:173%;margin-top:14px;color: #757575"></i></center>
+
+	</div>
+	 <div class="wm-animate-right4" style="width:28%;height:8%;background-color:#E0E0E0;float:left;margin-top: 16px;border-radius: 27px" id="m3">
+	  	      	   <center>   <i class="fa fa-compress" style="font-size:178%;margin-top:14px;    color: #03A9F4"></i></center>
+  
+	 </div>
+     <div class="wm-animate-right45" style="width:28%;height:8%;background-color:#E0E0E0;margin-left:4px;margin-right:5%;float:left;margin-top: 16px;border-radius: 27px" id="m4" onclick="document.getElementById('chatModal').style.display = 'block'">
+	 	  	      	  <center>    <i class="fa fa-comments" style="font-size:180%;margin-top:14px;    color: #3F51B5"></i></center>
+
+	 </div>
+	<div class="wm-animate-right45" style="width:28%;height:8%;background-color:#E0E0E0;margin-right:5%;float:left;margin-top: 16px;border-radius: 27px" id="m5">
+		  	      	    <center>  <i class="fa fa-upload" style="font-size:175%;margin-top:14px"></i></center>
+
+	</div>
+	 <div class="wm-animate-right45" style="width:28%;height:8%;background-color:#E0E0E0;float:left;margin-top: 16px;border-radius: 27px" id="m6">
+	 	  	      	     <center> <i class="fa fa-group" style="font-size:171%;margin-top:14px;color: #757575"></i></center>
+
+	 </div>
+     <div class="wm-animate-right5" style="width:28%;height:8%;background-color:#E0E0E0;margin-left:4px;margin-right:5%;float:left;margin-top: 16px;border-radius: 27px" id="m7">
+	 	  	      	    <center>  <i class="fa fa-link" style="font-size:176%;margin-top:14px"></i></center>
+
+	
+	 </div>
+	<div class="wm-animate-right5" style="width:28%;height:8%;background-color:#E0E0E0;margin-right:5%;float:left;margin-top: 16px;border-radius: 27px" id="m8">
+		  	      	     <center> <i class="fa fa-cloud" style="font-size:178%;margin-top:14px;color: #03A9F4"></i></center>
+
+	</div>
+	 <div class="wm-animate-right5" style="width:28%;height:8%;background-color:#E0E0E0;float:left;margin-top: 16px;border-radius: 27px" id="m9">
+	 	  	      	      <center><i class="fa fa-save" style="font-size:177%;margin-top:14px"></i></center>
+
+	 </div>
+     <div class="wm-animate-right55" style="width:28%;height:8%;background-color:#E0E0E0;margin-left:4px;margin-right:5%;float:left;margin-top: 16px;border-radius: 27px" id="m10">
+	 	  	      	     <center> <i class="fa fa-bell" style="font-size:176%;margin-top:14px"></i></center>
+
+	 </div>
+	<div class="wm-animate-right55" style="width:28%;height:8%;background-color:#E0E0E0;margin-right:5%;float:left;margin-top: 16px;border-radius: 27px;" id="m11">
+		  	      	     <center> <i class="fa fa-edit" style="font-size:178%;margin-top:14px;color: #757575"></i></center>
+
+	</div>
+	 <div class="wm-animate-right55" style="width:28%;height:8%;background-color:#E0E0E0;float:left;margin-top: 16px;border-radius: 27px" id="m12">
+	 	  	      	    <center>  <i class="fa fa-filter" style="font-size:176%;margin-top:14px;color: #607D8B"></i></center>
+
+	 </div>
+      <!--<div class="wm-animate-right" style="width:182.95px;height:749.55px;display:none;background-color:#eeeeee" id="bgmnu1">-->
+	       <div  class="wm-animate-right4" style="width:89%;height:112px;background-color:#fffeef;margin:6%;display:none;border-radius: 13px;border-bottom:1.5px solid #7e57c2" id="bgmnu11">
+		        <div style="width:100%;height: 80%">  
+				  <img src="sticker-orange.png" style="width:100%;height:96%">
+				</div>  
+				 <div style="width:100%;height:19%">
+					 <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="sticker-orange" onclick="bg(this.id)" onmouseover="abg(this.id)" onmouseout="pbg()"></i>
+
+					 <i class="fa fa-pencil" style="margin-left:8px;margin-top:0.5px" id="a1"></i>
+                     <i class="fa fa-share" style="margin-left:8px;margin-top:0.5px" id="a2"></i>
+                     <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="a3"></i>
+                      <i class="fa fa-save" style="margin-left:8px;margin-top:0.5px" id="a4"></i>					 
+				 </div> 
+		   </div>
+		   <div  class="wm-animate-right45" style="width:89%;height:112px;background-color:#fffeef;margin:6%;display:none;border-radius: 13px;border-bottom:1.5px solid #7e57c2" id="bgmnu12">
+		    		<div style="width:100%;height: 80%">   
+					   <img src="sticker-violet.png" style="width:100%;height:100%">
+					</div>   
+					   <div style="width:100%;height:19%">
+					       <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="sticker-violet" onclick="bg(this.id)" onmouseover="abg(this.id)" onmouseout="pbg()"></i>
+
+					        <i class="fa fa-pencil" style="margin-left:8px;margin-top:0.5px" id="a1"></i>
+                           <i class="fa fa-share" style="margin-left:8px;margin-top:0.5px" id="a2"></i>
+                           <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="a3"></i>
+                            <i class="fa fa-save" style="margin-left:8px;margin-top:0.5px" id="a4"></i>
+					   
+					   </div>
+
+		   </div>
+           <div class="wm-animate-right5"  style="width:89%;height:112px;background-color:#fffeef;margin:6%;display:none;border-radius: 13px;border-bottom:1.5px solid #7e57c2" id="bgmnu13">
+		     		<div style="width:100%;height: 80%">   
+					   <img src="sticker-blue.png" style="width:100%;height:100%">
+					</div>
+                     <div style="width:100%;height:19%">
+					      <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="sticker-blue" onclick="bg(this.id)" onmouseover="abg(this.id)" onmouseout="pbg()"></i>
+
+					      <i class="fa fa-pencil" style="margin-left:8px;margin-top:0.5px" id="a1"></i>
+                          <i class="fa fa-share" style="margin-left:8px;margin-top:0.5px" id="a2"></i>
+                          <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="a3"></i>
+                          <i class="fa fa-save" style="margin-left:8px;margin-top:0.5px" id="a4"></i>
+					   
+					   </div>
+		   </div>
+           <div  class="wm-animate-right55" style="width:89%;height:112px;background-color:#fffeef;margin:6%;display:none;border-radius: 13px;border-bottom:1.5px solid #7e57c2" id="bgmnu14">
+		     		<div style="width:100%;height: 80%">     	
+							<img src="sticker-blue.png" style="width:100%;height:100%">
+					</div>		
+                     <div style="width:100%;height:19%">
+					        <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="sticker-blue" onclick="bg(this.id)" onmouseover="abg(this.id)" onmouseout="pbg()"></i>
+
+					       <i class="fa fa-pencil" style="margin-left:8px;margin-top:0.5px" id="a1"></i>
+                           <i class="fa fa-share" style="margin-left:8px;margin-top:0.5px" id="a2"></i>
+                            <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="a3"></i>
+                            <i class="fa fa-save" style="margin-left:8px;margin-top:0.5px" id="a4"></i>
+					   
+					 </div>
+		   </div>
+           <div  class="wm-animate-right6" style="width:89%;height:112px;background-color:#fffeef;margin:6%;display:none;border-radius: 13px;border-bottom:1.5px solid #7e57c2" id="bgmnu15">
+		   		    <div style="width:100%;height: 80%"> 		    		   
+					        <img src="sticker.png" style="width:100%;height:100%">
+							</div>
+                     <div style="width:100%;height:19%">
+					       <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="sticker" onclick="bg(this.id)" onmouseover="abg(this.id)" onmouseout="pbg()"></i>
+
+					       <i class="fa fa-pencil" style="margin-left:8px;margin-top:0.5px" id="a1"></i>
+                           <i class="fa fa-share" style="margin-left:8px;margin-top:0.5px" id="a2"></i>
+                           <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="a3"></i>
+                           <i class="fa fa-save" style="margin-left:8px;margin-top:0.5px" id="a4"></i>
+					   
+					 </div>
+		   </div>
+             
+		
+	 <!-- </div>-->
+	  <!--<div class="wm-animate-right" style="width:182.95px;height:749.55px;display:none;background-color:#eeeeee" id="bgmnu2">-->
+	       <div  class="wm-animate-right4" style="width:89%;height:112px;background-color:#fffeef;margin:6%;display:none;border-radius: 13px;border-bottom:1.5px solid #7e57c2" id="bgmnu21">
+		        <div style="width:100%;height: 80%">  
+				  <img src="t9.png" style="width:100%;height:100%">
+				</div>  
+				 <div style="width:100%;height:19%">
+					 <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="t9" onclick="bg(this.id)" onmouseover="abg(this.id)" onmouseout="pbg()"></i>
+
+					 <i class="fa fa-pencil" style="margin-left:8px;margin-top:0.5px" id="a1"></i>
+                     <i class="fa fa-share" style="margin-left:8px;margin-top:0.5px" id="a2"></i>
+                     <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="a3"></i>
+                      <i class="fa fa-save" style="margin-left:8px;margin-top:0.5px" id="a4"></i>					 
+				 </div> 
+		   </div>
+		   <div class="wm-animate-right45"  style="width:89%;height:112px;background-color:#fffeef;margin:6%;display:none;border-radius: 13px;border-bottom:1.5px solid #7e57c2" id="bgmnu22">
+		    		<div style="width:100%;height: 80%">   
+					   <img src="ty.png" style="width:100%;height:100%">
+					</div>   
+					   <div style="width:100%;height:19%">
+					       <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="ty" onclick="bg(this.id)" onmouseover="abg(this.id)" onmouseout="pbg()"></i>
+
+					        <i class="fa fa-pencil" style="margin-left:8px;margin-top:0.5px" id="a1"></i>
+                           <i class="fa fa-share" style="margin-left:8px;margin-top:0.5px" id="a2"></i>
+                           <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="a3"></i>
+                            <i class="fa fa-save" style="margin-left:8px;margin-top:0.5px" id="a4"></i>
+					   
+					   </div>
+
+		   </div>
+           <div  class="wm-animate-right5" style="width:89%;height:112px;background-color:#fffeef;margin:6%;display:none;border-radius: 13px;border-bottom:1.5px solid #7e57c2" id="bgmnu23">
+		     		<div style="width:100%;height: 80%">   
+					   <img src="t3.png" style="width:100%;height:100%">
+					</div>
+                     <div style="width:100%;height:19%">
+					      <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="t3" onclick="bg(this.id)" onmouseover="abg(this.id)" onmouseout="pbg()"></i>
+
+					      <i class="fa fa-pencil" style="margin-left:8px;margin-top:0.5px" id="a1"></i>
+                          <i class="fa fa-share" style="margin-left:8px;margin-top:0.5px" id="a2"></i>
+                          <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="a3"></i>
+                          <i class="fa fa-save" style="margin-left:8px;margin-top:0.5px" id="a4"></i>
+					   
+					   </div>
+		   </div>
+           <div  class="wm-animate-right55" style="width:89%;height:112px;background-color:#fffeef;margin:6%;display:none;border-radius: 13px;border-bottom:1.5px solid #7e57c2" id="bgmnu24">
+		     		<div style="width:100%;height: 80%">     	
+							<img src="ap5.png" style="width:100%;height:100%">
+					</div>		
+                     <div style="width:100%;height:19%">
+					        <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="ap5" onclick="bg(this.id)" onmouseover="abg(this.id)" onmouseout="pbg()"></i>
+
+					       <i class="fa fa-pencil" style="margin-left:8px;margin-top:0.5px" id="a1"></i>
+                           <i class="fa fa-share" style="margin-left:8px;margin-top:0.5px" id="a2"></i>
+                            <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="a3"></i>
+                            <i class="fa fa-save" style="margin-left:8px;margin-top:0.5px" id="a4"></i>
+					   
+					 </div>
+		   </div>
+           <div  class="wm-animate-right6" style="width:89%;height:112px;background-color:#fffeef;margin:6%;display:none;border-radius: 13px;border-bottom:1.5px solid #7e57c2" id="bgmnu25">
+		   		    <div style="width:100%;height: 80%"> 		    		   
+					        <img src="bg.png" style="width:100%;height:100%">
+							</div>
+                     <div style="width:100%;height:19%">
+					       <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="bg" onclick="bg(this.id)" onmouseover="abg(this.id)" onmouseout="pbg()"></i>
+
+					       <i class="fa fa-pencil" style="margin-left:8px;margin-top:0.5px" id="a1"></i>
+                           <i class="fa fa-share" style="margin-left:8px;margin-top:0.5px" id="a2"></i>
+                           <i class="fa fa-check-square" style="margin-left:8px;margin-top:0.5px" id="a3"></i>
+                           <i class="fa fa-save" style="margin-left:8px;margin-top:0.5px" id="a4"></i>
+					   
+					 </div>
+		   </div>
+            <br>
+		<div class="w3-animate-bottom" style="width:100%;height:21px;margin-top:7px;display:none" id="arwo">
+		   <div class="arw" style="width:20px;height:20px;;height:20pxmargin-left:1px;border:0.4px dotted #cccccc;float:left " onclick=" bwd()">	 
+	            <i class="fa fa fa-arrow-left" style="margin-left:1px"></i>
+		   </div>
+		    <div class="arw" style="width:20px;height:20px;border:0.4px dotted #cccccc;float:left;margin-left:75% " onclick="fwd()">	 
+	            <i class="fa fa fa-arrow-right" style="margin-left:1.5px"></i>
+		   </div>
+		</div>
+	  <!--</div>-->
+    </div>
+
+<script>
+
+
+/*function vut()
+{
+document.getElementById("menutitle").innerHTML="Bg Image";
+//document.getElementById("menutitle").style.font-size=13px;
+
+document.getElementById("mySidebar").style.display = "block";
+
+
+}
+function b()
+{
+alert('hello');
+
+//document.getElementById("mySidebar").style.display = "none";
+
+}*/
+var a=1;    //global variable
+
+function c()
+{
+/*document.getElementById("m1").style.display = "none";
+document.getElementById("m2").style.display = "none";
+document.getElementById("m3").style.display = "none";
+document.getElementById("m4").style.display = "none";
+document.getElementById("m5").style.display = "none";
+document.getElementById("m6").style.display = "none";
+document.getElementById("m7").style.display = "none";
+document.getElementById("m8").style.display = "none";
+document.getElementById("m9").style.display = "none";
+document.getElementById("m10").style.display = "none";
+document.getElementById("m11").style.display = "none";
+document.getElementById("m12").style.display = "none";*/
+
+document.getElementById("menutitle").innerHTML="Bg Image";
+document.getElementById("arwo").style.display = "block";
+
+
+         var i;
+         for(i=1;i<=12;i++)
+           document.getElementById("m"+i).style.display = "none";
+         var j;
+         for(j=1;j<=5;j++)
+           document.getElementById("bgmnu"+a+j).style.display = "block";
+
+}
+function fwd()
+{       
+         var i;
+		 for(i=1;i<=5;i++)
+         document.getElementById("bgmnu"+a+i).style.display = "none";
+         a++;
+		 var j;
+		 for(j=1;j<=5;j++)
+         document.getElementById("bgmnu"+a+j).style.display = "block";
+		
+}
+function bwd()
+{        
+          var j;
+          for(j=1;j<=5;j++)
+          document.getElementById("bgmnu"+a+j).style.display = "none";
+          a--;
+		  var i;
+		  for(i=1;i<=5;i++)
+          document.getElementById("bgmnu"+a+i).style.display = "block";
+		  
+		 
+}
+function d()
+{
+     document.getElementById("menutitle").innerHTML="Customize";
+	 document.getElementById("arwo").style.display = "none";
+      var k;
+      for( k=1;k<=5;k++)
+           document.getElementById("bgmnu"+a+k).style.display = "none";
+       var q;  
+      for( q=1;q<=12;q++)
+           document.getElementById("m"+q).style.display = "block";
+
+       
+/*
+document.getElementById("m1").style.display = "block";
+document.getElementById("m2").style.display = "block";
+document.getElementById("m3").style.display = "block";
+document.getElementById("m4").style.display = "block";
+document.getElementById("m5").style.display = "block";
+document.getElementById("m6").style.display = "block";
+document.getElementById("m7").style.display = "block";
+document.getElementById("m8").style.display = "block";
+document.getElementById("m9").style.display = "block";
+document.getElementById("m10").style.display = "block";
+document.getElementById("m11").style.display = "block";
+document.getElementById("m12").style.display = "block";*/
+}
+
+var y=document.getElementById('canvas').style.backgroundImage;  //global variable
+//alert(document.getElementById('canvas').style.backgroundImage)  //global variable
+
+function bg(clicked)
+{
+var x=clicked + ".png" ;
+//var url="url(""+x+"")";
+document.getElementById('canvas').style.backgroundImage = "url("+x+")";
+y="url('"+x+"')" ;
+ //alert(y);
+}
+function abg(clicked)
+{
+var x=clicked + ".png" ;
+//var url="url(""+x+"")";
+document.getElementById('canvas').style.backgroundImage = "url("+x+")";
+}
+function pbg()
+{  
+ document.getElementById('canvas').style.backgroundImage = y; 
+}
+</script>
+</body>
+</html>
